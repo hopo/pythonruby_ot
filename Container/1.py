@@ -1,7 +1,7 @@
 name='harpa'
 names=['harpa','obama','riceboy']
 
-print(type(name)) #string #R puts(name.class)
+print(type(name)) #string #R: puts(name.class)
 print(name)
 
 print(type(names)) #list
