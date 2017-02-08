@@ -8,3 +8,4 @@ members=['harpa','amber','riceboy','sooki']
 
 for member in members:
 	print(member)
+print('* for term *')
