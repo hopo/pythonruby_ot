@@ -1,3 +1,4 @@
+#block and standard code
 5.times(){|i| puts i}
 
 i=0
