@@ -1,4 +1,12 @@
-class Cal(object):
+class CalMultiply():
+    def multiply(self):
+        return self.v1*self.v2
+
+class CalDivide():
+    def divide(self):
+        return self.v1/self.v2
+
+class Cal(CalMultiply,CalDivide): #multiple inheritance
     def __init__(self,v1,v2): #constructor
         if isinstance(v1,int):
             self.v1=v1
@@ -18,20 +26,8 @@ class Cal(object):
             self.value2=v2
     def getV2(self):
         return self.v2
-
-class CalMultiply(Cal):
-    def multiply(self):
-        return self.v1*self.v2
-
-class CalDivide(CalMultiply):
-    def divide(self):
-        return self.v1/self.v2
-
-c1=CalMultiply(10,10)
-print('c1',c1.add())
-print('c1',c1.multiply())
-
-c2=CalDivide(20,10)
-print('c2',c2.add())
-print('c2',c2.multiply())
-print('c2',c2.divide())
+        
+c=Cal(100,10)
+print(c.add())
+print(c.multiply())
+print(c.divide())
