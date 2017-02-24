@@ -1,0 +1,35 @@
+[java words]
+
+-data type
+-character,string
+variables
+-byte,short,integer,long,float,double
+-implicit,explicit conversion
+-conditional operator
+-boolean
+-loop / iteration
+-if / while / for / for-each/ switch
+-array / length / index / element
+-parameter / arguement
+-scanner
+-try / catch /finally
+-throws / throw
+-oop / state/ behave
+-refactoring
+-object / instance
+-static,non-static field
+-scope
+-global,local variables
+-constructor
+-inheritance,extends
+-super,sub / base,derived
+-overriding / overloading
+-signature
+-classpath
+-Acceess / public,protected,default,private
+-abstract,final
+-interface, implements
+-Polymorphism
+-Exception
+-Throwable
+-cheked,unchecked
