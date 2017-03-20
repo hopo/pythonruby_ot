@@ -1,4 +1,4 @@
-al=['A','B','C']
+al=['A', 'B', 'C']
 
 print(al) #type 'list' #R: type 'array'
 print(len(al)) #R: puts(al.length)

@@ -1,7 +1,7 @@
-id=11
-input=11
-if id==input:
-	print("Hello. ")
+id = 11
+input = 11
+if id == input:
+	print("Hello! ")
 else:
 	print("Who???")
 

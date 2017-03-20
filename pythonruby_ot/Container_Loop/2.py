@@ -1,9 +1,9 @@
-members=['harpa','amber','riceboy','sooki']
+members = ['harpa','amber','riceboy','sooki']
 
-# i=0
-# while i<len(members): #R: while i<members.length do
+# i = 0
+# while i<len(members):
 # 	print(members[i])
-# 	i=i+1
+# 	i += 1
 # print('* while term *')
 
 for member in members:

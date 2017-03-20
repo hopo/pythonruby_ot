@@ -1,8 +1,8 @@
-id="aa"
-in_A=11;in_B="aa"
-if id==in_A:
+id = "aa"
+in_A = 11; in_B = "aa"
+if id == in_A:
 	print("Hello. A")
-elif id==in_B:
+elif id == in_B:
 	print("Hello. B")
 else:
 	print("WHO???")
