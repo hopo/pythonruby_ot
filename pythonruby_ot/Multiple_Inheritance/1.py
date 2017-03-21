@@ -14,7 +14,7 @@ class C3(C1,C2):
     def m(self):
         print('C3 m')
 
-c=C3()
+c = C3()
 c.c1_m()
 c.c2_m()
 c.m()

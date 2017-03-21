@@ -1,5 +1,5 @@
-i=0
-while i<10: 
+i = 0
+while i<10:
 	print("print('Hello World "+str(i*9)+"')") #R: +(i*9).to_s()+
-	i=i+1
+	i += 1
 print('* while term. *')

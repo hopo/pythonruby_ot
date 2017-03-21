@@ -1,3 +1,4 @@
 import lib
-obj=lib.A()
+
+obj = lib.A()
 print(obj.a())

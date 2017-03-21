@@ -1,3 +1,3 @@
 class A:
-	def a(self;):
+	def a(self):
 		return 'a'
