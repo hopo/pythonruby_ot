@@ -1,4 +1,4 @@
-supp=200;stud=5;spon=20;
+supp = 200; stud = 5; spon = 20;
 print((supp*stud)/spon)
 
 

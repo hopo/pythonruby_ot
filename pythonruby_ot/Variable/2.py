@@ -1,4 +1,4 @@
-name="B. Obama"
+name = "B. Obama"
 print("Hello. "+name)
 print("Huh?")
 print(name+". A-yo!!")
