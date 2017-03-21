@@ -1,4 +1,4 @@
-in_str=input("INPUT: ")
+in_str = input("INPUT: ")
 print(in_str.upper()+", Hello!!!")
 
 

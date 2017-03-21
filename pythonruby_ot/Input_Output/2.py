@@ -1,8 +1,8 @@
-in_str=input("INPUT: ")
-idA="11";idB="bb"
-if in_str==idA:
+in_str = input("INPUT: ")
+idA = "11"; idB = "bb"
+if in_str == idA:
 	print("Hello. A")
-elif in_str==idB:
+elif in_str == idB:
 	print("Hello. B")
 else:
 	print("WHO???")

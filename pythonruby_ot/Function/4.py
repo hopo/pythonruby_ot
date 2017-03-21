@@ -5,8 +5,8 @@
 # print(a(inptA,inptB))
 
 def floop():
-	inpt_str=input('str: ')
-	inpt_num=input('num: ')
+	inpt_str = input('str: ')
+	inpt_num = input('num: ')
 	print(inpt_str*int(inpt_num))
 
 floop()

@@ -1,6 +1,6 @@
-in_str=input("INPUT :")
-real_A="11";real_B="bb"
-if real_A==in_str or real_B==in_str:
+in_str = input("INPUT :")
+real_A = "11"; real_B = "bb"
+if real_A == in_str or real_B == in_str:
 	print("Hello!")
 else:
 	print("Who are you?")

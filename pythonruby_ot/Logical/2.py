@@ -1,9 +1,9 @@
-inpt_id=input("ID : ")
-inpt_pw=input("PW : ")
-user_id="obama"
-user_pw="11"
-if user_id==inpt_id:
-	if user_pw==inpt_pw:
+inpt_id = input("ID : ")
+inpt_pw = input("PW : ")
+user_id = "obama"
+user_pw = "11"
+if user_id == inpt_id:
+	if user_pw == inpt_pw:
 		print("Hello!")
 	else:
 		print("Wrong password.")
