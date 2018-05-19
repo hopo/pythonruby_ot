@@ -1,5 +1,19 @@
-node_modules/
 
 .DS_Store
+
 *.swp
+*.swo
+
+.gdb_history
+
+cTest.out
+cTest.outr
+
 *.pyc
+
+node_modules/
+
+*.class
+
+.metadata/
+.recommenders/
