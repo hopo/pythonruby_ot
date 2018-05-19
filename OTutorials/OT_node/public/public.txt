@@ -1,6 +1,0 @@
-here
-is
-static
-or
-public
-.
