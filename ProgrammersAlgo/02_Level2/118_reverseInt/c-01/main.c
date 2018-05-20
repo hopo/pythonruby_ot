@@ -1,6 +1,5 @@
 #include <stdio.h>
 
-
 void reverseInt(int *);
 
 int main() {
