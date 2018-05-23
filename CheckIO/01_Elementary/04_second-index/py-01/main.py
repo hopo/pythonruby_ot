@@ -1,24 +1,11 @@
 
-# ...ing
-"""
-func second_index(text string, symbol string) int {
-	tsl := []byte(text)
-	sym := []byte(symbol)
-	var box []int
-	for i, v := range tsl {
-		if v == sym[0] {
-			box = append(box, i)
-		}
-	}
-	if len(box) < 2 {
-		return -1
-	}
-	return box[1]
-}
-"""
 def second_index(text, symbol):
-    n = text.index(symbol)
-    return n
+    cnt = idx = 0
+    for i in range(len(text)):
+        if text[i] == symbol:
+            idx = i
+            cnt += 1
+    return cnt == 2 and idx or -1
     
 
 if __name__ == '__main__':
@@ -32,5 +19,4 @@ if __name__ == '__main__':
     print(ex4)
     ex5 = second_index("hi mr Mayor", " ") # 5, "Fifth"
     print(ex5)
-    
     
