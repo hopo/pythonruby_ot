@@ -13,9 +13,9 @@ if __name__ == '__main__':
     print(ex1)
     ex2 = second_index("find the river", "e") # 12, "Second"
     print(ex2)
-    ex3 = second_index("hi", " ") # -1, "Third"
+    ex3 = second_index("hi", " ") # None, "Third"
     print(ex3)
-    ex4 = second_index("hi mayor", " ") # -1, "Fourth"
+    ex4 = second_index("hi mayor", " ") # None, "Fourth"
     print(ex4)
     ex5 = second_index("hi mr Mayor", " ") # 5, "Fifth"
     print(ex5)

@@ -1,14 +1,15 @@
-# ...ing
 
 def first_word(text: str) -> str:
-    lst = text.split(' ')
-    if lst[0] == '':
-        lst.pop(0)
-    if not lst[0][0].isalpha():
-        lst.pop(0) 
-    if not lst[0][-1].isalpha():
-        lst[0] = lst[0][:-1]
-    return lst[0]
+    ret = ''
+    begin = False
+    for s in text:
+        if not begin:
+            if s.isalpha(): begin = True
+            else: continue
+        if s == ' ' or s == '.' or s == ',':
+            break
+        ret += s
+    return ret
 
 if __name__ == '__main__':
     ex1 = first_word("Hello world") # "Hello"
@@ -23,7 +24,6 @@ if __name__ == '__main__':
     print(ex5)
     ex6 = first_word("hi") # "hi"
     print(ex6)
-    
     ex7 = first_word("Hello.World") # "Hello"
     print(ex7)
 
