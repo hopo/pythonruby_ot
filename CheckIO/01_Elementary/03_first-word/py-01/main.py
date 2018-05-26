@@ -1,3 +1,4 @@
+# ...ing
 
 def first_word(text: str) -> str:
     lst = text.split(' ')
@@ -22,4 +23,7 @@ if __name__ == '__main__':
     print(ex5)
     ex6 = first_word("hi") # "hi"
     print(ex6)
+    
+    ex7 = first_word("Hello.World") # "Hello"
+    print(ex7)
 
