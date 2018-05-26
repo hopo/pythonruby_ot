@@ -5,7 +5,7 @@ def second_index(text, symbol):
         if text[i] == symbol:
             idx = i
             cnt += 1
-    return cnt == 2 and idx or -1
+    return cnt == 2 and idx or None
     
 
 if __name__ == '__main__':
