@@ -1,13 +1,17 @@
 
 def bigger_price(limit: int, data: list) -> list:
     lst = list()
-    ret = list()
+    cnt = 0
     for i in range(len(data)):
-        lst.append(data[i]['price'])
-    for i in range(limit):
-        idx = lst.index(max(lst))
-        ret.append(data[idx])
-        lst.pop(idx)
+        for j in range(len(data)):
+            if (data[i]['price'] < data[j]['price']):
+                cnt += 1
+        lst.append(cnt)
+        cnt = 0
+
+    ret = list()
+    for n in range(limit):
+        ret.append(data[lst.index(n)])
 
     return ret
 
@@ -30,4 +34,3 @@ if __name__ == '__main__':
             {"name": "whiteboard", "price": 170}
         ]) # [{"name": "whiteboard", "price": 170}], "Second"
     pprint(ex2)
-

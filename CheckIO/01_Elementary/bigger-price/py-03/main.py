@@ -1,20 +1,15 @@
 
 def bigger_price(limit: int, data: list) -> list:
-    lst = list()
-    ret = list()
-    for i in range(len(data)):
-        lst.append(data[i]['price'])
-    for i in range(limit):
-        idx = lst.index(max(lst))
-        ret.append(data[idx])
-        lst.pop(idx)
-
-    return ret
+    lnth = len(data)
+    for i in range(lnth-1):
+        for j in range(i, lnth):
+            if data[i]['price'] < data[j]['price']:
+                data[i], data[j] = data[j], data[i]
+    return data[:limit]
 
 
 if __name__ == '__main__':
     from pprint import pprint
-
     ex1 = bigger_price(2,
         [
             {"name": "bread", "price": 100},
