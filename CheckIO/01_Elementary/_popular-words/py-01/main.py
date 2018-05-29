@@ -1,7 +1,8 @@
-# ...ing
 
 def popular_words(text: str, words: list) -> dict:
-    spl = text.lower().split(' ')
+    rt = text.replace('\n', ' ')
+
+    spl = rt.lower().split(' ')
     ls = list()
     for e in spl:
         if e[-1:] == '\n':
@@ -27,8 +28,7 @@ When I was One
 I had just begun
 When I was Two
 I was nearly new
-''',
-            ['i', 'was', 'three', 'near']
-        ) # { 'i': 4, 'was': 3, 'three': 0, 'near': 0 }
+''', 
+        ['i', 'was', 'three', 'near']) # { 'i': 4, 'was': 3, 'three': 0, 'near': 0 }
     print(ex1)
 
