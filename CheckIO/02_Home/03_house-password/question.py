@@ -1,4 +1,4 @@
-// https://py.checkio.org/mission/house-password/
+# https://py.checkio.org/mission/house-password/
 
 def checkio(data):
 

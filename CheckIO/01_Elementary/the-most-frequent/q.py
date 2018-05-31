@@ -1,1 +1,0 @@
-/Users/hp/workspace/CheckIO/01_Elementary/16_the-most-frequent/question.py
