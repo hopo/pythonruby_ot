@@ -21,7 +21,9 @@ count_words("Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
 """
 
 def count_words(text, words):
-    return 0
+    idx = text.lower().find("hello")
+    print(idx)
+    return ''
 
 
 if __name__ == '__main__':
