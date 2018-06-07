@@ -1,3 +1,5 @@
+# ...ing
+
 # https://py.checkio.org/mission/pawn-brotherhood/
 
 def safe_pawns(pawns):
