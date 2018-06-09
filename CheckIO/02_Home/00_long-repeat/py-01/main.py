@@ -1,3 +1,4 @@
+# ...ing
 
 def long_repeat(line):
     char = line[0]
@@ -18,4 +19,8 @@ if __name__ == '__main__':
     print(ex1)
     ex2 = long_repeat('ddvvrwwwrggg') # 3, "Second"
     print(ex2)
+    ex3 = long_repeat('') # 0
+    print(ex3)
+    ex4 = long_repeat('aa') # 2
+    print(ex4)
 

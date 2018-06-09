@@ -1,6 +1,7 @@
+# ...ing
 
-def xo_referee(ls):
-    a, b, c = ls[0], ls[1], ls[2]
+def xo_referee(game_result):
+    a, b, c = game_result[0], game_result[1], game_result[2]
 
     if (a+b+c).find(".") == -1:
         return "D"
@@ -12,6 +13,7 @@ def xo_referee(ls):
     return b[1]
 
 if __name__ == '__main__':
+    '''
     ex1 = xo_referee(["X.O", "XX.", "XOO"])  # "X", "Xs wins"
     print(ex1)
     ex2 = xo_referee(["OO.", "XOX", "XOX"])  # "O", "Os wins"
@@ -22,4 +24,7 @@ if __name__ == '__main__':
     print(ex4)
     ex5 = xo_referee(["O.O ", "OO.", "XXX"]) # "X", "hp check"
     print(ex5)
+    '''
+    ex6 = checkio(["OXO","XOX","OXO"]) # "O"
+    print(ex6)
 

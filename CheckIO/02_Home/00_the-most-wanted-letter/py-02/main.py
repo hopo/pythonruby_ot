@@ -1,6 +1,7 @@
+# ...ing
 
-def most_wanted(data):
-    box = list(data.lower())
+def most_wanted(text):
+    box = list(text.lower())
     box.sort()
 
     mx = 1
@@ -22,6 +23,7 @@ def most_wanted(data):
     return most
 
 if __name__ == '__main__':
+    '''
     ex1 = most_wanted("Hello World!") # "l", "1st example"
     print(ex1)
     ex2 = most_wanted("How do you do?")   # "o", "2nd example"
@@ -32,4 +34,7 @@ if __name__ == '__main__':
     print(ex4)
     ex5 = most_wanted("AAaooo!!!!")   # "a", "Letters"
     print(ex5)
+    '''
+    ex6 = most_wanted("Aaaaaaaaaaaaaaaa!!!!") # "a"
+    print(ex6)
 
