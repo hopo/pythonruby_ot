@@ -1,3 +1,4 @@
+# ...ing
 
 def long_repeat(line):
     if line == '':
