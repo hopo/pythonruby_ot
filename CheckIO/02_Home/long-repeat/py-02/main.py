@@ -1,22 +1,23 @@
-# ...ing
 
 def long_repeat(line):
     if line == '':
         return 0
 
-    char = line[0]
     cnt = 0
-    mx = 0
+    chk = line[0]
+    ls = list()
+
     for e in line:
-        if char == e:
+        if chk == e:
             cnt += 1
         else:
-            if mx < cnt:
-                mx = cnt
-            char = e
-            cnt = 1 
+            ls.append(cnt)
+            cnt = 1
+            chk = e
 
-    return mx == 0 and cnt or mx
+    ls.append(cnt)
+
+    return max(ls)
 
 if __name__ == '__main__':
     ex1 = long_repeat('sdsffffse') # 4, "First"
