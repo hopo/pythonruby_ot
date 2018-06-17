@@ -1,11 +1,12 @@
+# ...ing
 
 def most_wanted(data):
     ls = list(data.lower())
     ls.sort()
 
-    box = []
+    box = list()
     for e in ls:
-        if e.isalpha():
+        if ord(e) >= ord('A') and ord(e) <= ord('z'):
             box.append(e)
 
     mx = 1
@@ -36,4 +37,8 @@ if __name__ == '__main__':
     print(ex4)
     ex5 = most_wanted("AAaooo!!!!")   # "a", "Letters"
     print(ex5)
+    ex6 = most_wanted("Aaaaaaaaaaaaaaaa!!!!") # "a"
+    print(ex6)
+    ex7 = most_wanted("abb") # "b"
+    print(ex7)
 
