@@ -1,28 +1,6 @@
 # ...ing
 
 def most_wanted(data):
-    ls = list(data.lower())
-    ls.sort()
-
-    box = list()
-    for e in ls:
-        if ord(e) >= ord('A') and ord(e) <= ord('z'):
-            box.append(e)
-
-    mx = 1
-    cnt = 1
-    most = box[0]
-    target = box[0]
-
-    for i in range(1, len(box)):
-        if target != box[i]:
-            if mx < cnt:
-                mx = cnt
-                most = box[i-1]
-            cnt = 1
-            target = box[i]
-        else:
-            cnt += 1
 
     return most
 
