@@ -1,7 +1,6 @@
 # ...ing
 
 def xo_referee(game_result):
-
     return "D"
 
 if __name__ == '__main__':
