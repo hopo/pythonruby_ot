@@ -6,7 +6,7 @@ url = "https://news.google.co.kr/"
 response = requests.get(url)
 
 print(response.text)
-#soup = BeautifulSoup(response.text, 'html.parser')
-#list = soup.select('li.list-group-item')
+soup = BeautifulSoup(response.text, 'html.parser')
 
-#print(list)
+#ls = soup.select('li.list-group-item')
+# print(ls)
