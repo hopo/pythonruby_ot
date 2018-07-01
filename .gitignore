@@ -3,17 +3,22 @@
 
 *.swp
 *.swo
+*~
 
 .gdb_history
 
 cTest.out
 cTest.outr
 
-*.pyc
-
 node_modules/
 
 *.class
-
 .metadata/
 .recommenders/
+
+
+*.pyc
+__pycache__
+myvenv
+db.sqlite3
+/static
