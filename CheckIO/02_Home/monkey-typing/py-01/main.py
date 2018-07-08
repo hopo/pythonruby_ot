@@ -8,13 +8,14 @@ def count_words(text, words):
 
 
 if __name__ == '__main__':
-    ex1 = count_words("How aresjfhdskfhskd you?", {"how", "are", "you", "hello"}) # 3, "Example"
+    ex1 = count_words("How aresjfhdskfhskd you?", {
+                      "how", "are", "you", "hello"})  # 3, "Example"
     print(ex1)
-    ex2 = count_words("Bananas, give me bananas!!!", {"banana", "bananas"}) # 2, "BANANAS!"
+    ex2 = count_words("Bananas, give me bananas!!!", {
+                      "banana", "bananas"})  # 2, "BANANAS!"
     print(ex2)
     ex3 = count_words(
-            "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
-            {"sum", "hamlet", "infinity", "anything"}
-        ) # 1, "Weird text"
+        "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
+        {"sum", "hamlet", "infinity", "anything"}
+    )  # 1, "Weird text"
     print(ex3)
-

@@ -19,13 +19,13 @@ def long_repeat(line):
 
     return max(ls)
 
-if __name__ == '__main__':
-    ex1 = long_repeat('sdsffffse') # 4, "First"
-    print(ex1)
-    ex2 = long_repeat('ddvvrwwwrggg') # 3, "Second"
-    print(ex2)
-    ex3 = long_repeat('') # 0
-    print(ex3)
-    ex4 = long_repeat('aa') # 2
-    print(ex4)
 
+if __name__ == '__main__':
+    ex1 = long_repeat('sdsffffse')  # 4, "First"
+    print(ex1)
+    ex2 = long_repeat('ddvvrwwwrggg')  # 3, "Second"
+    print(ex2)
+    ex3 = long_repeat('')  # 0
+    print(ex3)
+    ex4 = long_repeat('aa')  # 2
+    print(ex4)
