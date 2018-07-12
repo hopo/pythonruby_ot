@@ -2,7 +2,7 @@ import re
 import requests
 from bs4 import BeautifulSoup
 
-url = ''
+url = 'website.url'
 
 html = requests.get(url).text
 soup = BeautifulSoup(html)
