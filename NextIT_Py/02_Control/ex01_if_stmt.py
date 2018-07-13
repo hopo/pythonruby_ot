@@ -2,7 +2,7 @@
 gender = 'M'
 
 if __name__ == '__main__':
-    ret = "";
+    ret = ""
     if gender == 'M':
         ret = "Man"
     elif fender == 'F':

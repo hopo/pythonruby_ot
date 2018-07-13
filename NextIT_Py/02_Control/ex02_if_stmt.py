@@ -22,7 +22,7 @@ if __name__ == '__main__':
         grade = "D+"
     elif average >= 60:
         grade = "D"
-    else :
+    else:
         grade = "F"
 
     print("Your grade | {} : {}".format(grade, average))
