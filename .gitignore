@@ -19,6 +19,5 @@ node_modules/
 
 *.pyc
 __pycache__
-venv
+venv/
 db.sqlite3
-/static
