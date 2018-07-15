@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<document>
+	<body class="prod01">
+		<div id="myDiv">Hello xml.dom</div>
+	</body>
+</document>
