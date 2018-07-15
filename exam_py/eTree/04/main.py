@@ -1,5 +1,5 @@
-from xml.etree.ElementTree import ElementTree
 from xml.etree.ElementTree import Element
+from xml.etree.ElementTree import ElementTree
 
 BR = Element('br')
 
@@ -36,7 +36,7 @@ print(ttt.text)
 
 
 # /
-root = Element('body')    # createElement
+root = Element('body')  # createElement
 
 # div#myTitle
 eDiv = make_node(
@@ -98,7 +98,6 @@ eTr.append(eTd)
 eInput = make_node('input', 'type=submit^value=LOGIN')
 eTd.append(eInput)
 eTable.append(eTr)
-
 
 # ----------------------------------
 #  write file
