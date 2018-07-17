@@ -4,7 +4,7 @@ b = [1, 2, 3]
 
 print(a == b)  # True
 
-rint(a is b)  # False
+print(a is b)  # False
 
 print(id(a))
 print(id(b))
