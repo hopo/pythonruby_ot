@@ -43,9 +43,16 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'main',
-    'hpblog',
 ]
+
+MYSITE_APPS = [
+    'main',
+    'hpblog'
+]
+
+# ; INSTALLED_APPS + MYSITE_APPS
+INSTALLED_APPS.extend(MYSITE_APPS)
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -62,8 +69,9 @@ ROOT_URLCONF = 'mysite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-#         'DIRS': [],
-        'DIRS': [os.path.join(BASE_DIR, 'templates')], # USER added
+        'DIRS': [
+            os.path.join(BASE_DIR, 'templates') # ;;;USER added
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -127,5 +135,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+# STATIC_ROOT = '/var/www/myweb_static' # ;;;collectstatic?
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static/') # ;;;USER added
+]
 

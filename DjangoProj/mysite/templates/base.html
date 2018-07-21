@@ -1,18 +1,22 @@
+{% load staticfiles %}
+
 <!DOCTYPE html>
 
 <!-- base.html -->
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>DULL BOY</title>
+	<title>Django Project mysite</title>
+	<link rel="stylesheet" href="{% static 'style/mysite.css' %}">
 </head>
 <body>
 	<header>
 		<div id='maintitle' style='font-size:2em;'>DULL BOY</div>
-		<table class='table' border='1px' style='border-collapse:collapse;'>
+		<table class='table' border='1px'>
 			<tr>
 				<th>main/</th>
 				<th>hpblog/</th>
+				<th>(docs-django)</th>
 			</tr>
 			<tr>
 				<td>
@@ -21,12 +25,17 @@
 				<td>
 					<a href='/hpblog/'>board_list.html</a>
 				</td>
+				<td>
+					<a href='https://docs.djangoproject.com/ko/1.11/' target='_blank'>docs_django1.11</a>
+				</td>
 			</tr>
 		</table>
 	</header>
 	<hr>
+
 	{% block content %}
 	{% endblock %}
+
 	<hr>
 </body>
 </html>
