@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<!-- layout.html -->
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DULL BOY</title>
+</head>
+<body>
+	<header>
+		<div id='maintitle' style='font-size:2em;'>DULL BOY</div>
+		<table class='table' border='1px' style='border-collapse:collapse;'>
+			<tr>
+				<th>main/</th>
+				<th>hpblog/</th>
+			</tr>
+			<tr>
+				<td>
+					<a href='/'>index.html</a>
+				</td>
+				<td>
+					<a href='/hpblog/'>board_list.html</a>
+				</td>
+			</tr>
+		</table>
+	</header>
+	<hr>
+	{% block content %}
+	{% endblock %}
+	<hr>
+</body>
+</html>
