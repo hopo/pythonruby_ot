@@ -1,9 +1,13 @@
+
 /*
  * =========================================================
  * DjangoProj mysite
- * /static/style/mysite.css
+ * /static/style/common.css
  * =========================================================
  */
+
+
+/* === CLASSES  === */
 
 .table {
 	border-collapse : collapse;
@@ -11,8 +15,14 @@
 }
 
 .pagetitle {
-	color : orange;	
+	color : blue;	
 	font-size : 1.5em;
 }
 
+.container {
+	align-content: center;
+    padding-left: 10%;
+    padding-right: 10%;
+    width: 80%;
+}
 

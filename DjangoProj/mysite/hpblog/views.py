@@ -1,8 +1,15 @@
 from django.shortcuts import render
-# from django.http import HttpResponse
+
+from .models import Post
 
 # Create your views here.
 
+
 def board_list(request):
-    param = '***test_parameter'
-    return render(request, 'hpblog/board_list.html', {'param': param})
+
+    post = Post.objects.all()
+
+    context = {'post' : post}
+
+    return render(request, 'hpblog/board_list.html', {'context': context})
+

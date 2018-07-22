@@ -1,6 +1,25 @@
 {% extends "base.html" %}
 
 {% block content %}
-	<div class='pagetitle'>hpblog board_list</div>
-	<div>parameter: {{ param }}</div>
+
+	<div class='container'>
+		<div class='pagetitle'>hpblog board_list</div>
+		<table border='1px' class='table'>
+			<tr>
+				<th>AUTHOR</th>
+				<th>TITLE</th>
+				<th>TEXT</th>
+				<th>CREATE_DATE</th>
+			</tr>
+			{% for p in context.post %}
+			<tr>
+				<td>{{p.author}}</td>
+				<td>{{p.title}}</td>
+				<td>{{p.text}}</td>
+				<td>{{p.create_date}}</td>
+			</tr>
+			{% endfor %}
+	</table>
+	</div>
+
 {% endblock %}
