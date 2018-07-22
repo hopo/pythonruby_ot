@@ -11,5 +11,5 @@ def board_list(request):
 
     context = {'post' : post}
 
-    return render(request, 'hpblog/board_list.html', {'context': context})
+    return render(request, 'hpblog/board_list.html', context)
 
