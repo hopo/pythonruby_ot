@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+	<div class='container'>
+		<div class='pagetitle'>hpblog board_insert</div>
+		<form action="" method="post">
+		<table border='1px' class='table'>
+			<tr>
+				<td>Title</td>
+				<td>
+					<input type="text" name="p_text" />
+				</td>
+			</tr>
+			<tr>
+				<td>author</td>
+				<td>
+					<input type="text" name="p_author" />
+				</td>
+			</tr>
+			<tr>
+				<td>text</td>
+				<td>
+					<textarea name="p_text" rows="8" cols="40"></textarea>
+				</td>
+			</tr>
+		</table>
+		</form>
+	</div>
+
+	<div class='container'>
+		<div class='pagetitle'>hpblog board_insert</div>
+		<form action="" method="post">
+		{% csrf_token %}
+		<table border='1px' class='table'>
+			<tr>
+				<td>Title</td>
+				<td>
+					<input type="text" name="p_text" />
+				</td>
+			</tr>
+			<tr>
+				<td>author</td>
+				<td>
+					<input type="text" name="p_author" />
+				</td>
+			</tr>
+			<tr>
+				<td>text</td>
+				<td>
+					{{ form }}
+				</td>
+			</tr>
+		</table>
+		</form>
+	</div>
+
+{% endblock %}
