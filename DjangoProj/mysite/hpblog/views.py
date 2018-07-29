@@ -11,19 +11,19 @@ def board_list(request):
     template = 'hpblog/board_list.html'
 
     post = Post.objects.all()
-    context = {'post' : post}
+    context = {'post': post}
 
     return render(request, template, context)
+
 
 def board_insert(request):
 
     template = 'hpblog/board_insert.html'
-    
+
     inputTextForm = InputTextForm
 
     context = {
-        'inputTextForm' : inputTextForm,
+        'inputTextForm': inputTextForm,
     }
 
     return render(request, template, context)
-

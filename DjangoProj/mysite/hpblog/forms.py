@@ -18,15 +18,14 @@ class InputTextForm(forms.ModelForm):
         ]
 
         widgets = {
-            'title' : forms.TextInput(
+            'title': forms.TextInput(
                 attrs={'placeholder': 'Title Is ..'}
             ),
-            'content' : forms.Textarea(
+            'content': forms.Textarea(
                 attrs={
-                    'cols' : '80',
-                    'rows' : '10',
-                    'placeholder' : 'Write Your Mind ..'
+                    'cols': '80',
+                    'rows': '10',
+                    'placeholder': 'Write Your Mind ..'
                 }
             )
         }
-
