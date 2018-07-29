@@ -4,44 +4,20 @@
 
 	<div class='container'>
 		<div class='pagetitle'>hpblog board_insert</div>
-		<form action="" method="post">
-		<table border='1px' class='table'>
-			<tr>
-				<td>Title</td>
-				<td>
-					<input type="text" name="p_text" />
-				</td>
-			</tr>
-			<tr>
-				<td>author</td>
-				<td>
-					<input type="text" name="p_author" />
-				</td>
-			</tr>
-			<tr>
-				<td>text</td>
-				<td>
-					<textarea name="p_text" rows="8" cols="40"></textarea>
-				</td>
-			</tr>
-		</table>
+		<form action="#" method="post">
+			{% csrf_token %}
+
+			<!-- // solA) form in table
+			<table border='1px' class='table'>
+				{{ inputTextForm }}	
+			</table>
+			-->
+
+			<!-- // solB) form surrond p tag using djtemplate method -->
+			{{ inputTextForm.as_p }}	
+			<input type="submit" value="register-post" />
 		</form>
-	</div>
-	<div class='container'>
-		<div class='pagetitle'>hpblog board_insert</div>
-		<form action="" method="post">
-		{% csrf_token %}
-		<table border='1px' class='table'>
-			{{ inputTextForm }}	
-			<tr>
-				<td>author</td>
-				<td>
-					<input type="text" name="p_author" />
-				</td>
-			</tr>
-			{{ tareaForm }}
-		</table>
-		</form>
+		<a href="{% url 'board_list' %}">cancel</a>
 	</div>
 
 {% endblock %}

@@ -20,11 +20,9 @@ def board_insert(request):
     template = 'hpblog/board_insert.html'
     
     inputTextForm = InputTextForm
-    tareaForm = TareaForm
 
     context = {
         'inputTextForm' : inputTextForm,
-        'tareaForm' : tareaForm,
     }
 
     return render(request, template, context)
