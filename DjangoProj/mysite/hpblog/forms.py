@@ -19,7 +19,9 @@ class InputTextForm(forms.ModelForm):
 
         widgets = {
             'title': forms.TextInput(
-                attrs={'placeholder': 'Title Is ..'}
+                attrs={
+                'placeholder': 'Title Is ..'
+                }
             ),
             'content': forms.Textarea(
                 attrs={

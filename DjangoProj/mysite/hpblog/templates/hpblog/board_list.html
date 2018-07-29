@@ -16,13 +16,17 @@
 			<tr>
 				<td>{{p.id}}</td>
 				<td>{{p.author}}</td>
-				<td>{{p.title}}</td>
+				<td>
+					<a href="{% url 'board_item' %}"> <!-- param!! -->
+						{{p.title}}
+					</a>
+				</td>
 				<td>{{p.content}}</td>
 				<td>{{p.create_date}}</td>
 			</tr>
 			{% endfor %}
 			<tr>
-				<td collspac="3">
+				<td collspan="3">
 					<a href="{% url 'board_insert' %}">InsertPost</a>
 				</td>
 			</tr>
