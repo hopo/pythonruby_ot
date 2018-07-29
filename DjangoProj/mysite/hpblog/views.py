@@ -45,7 +45,7 @@ def new_post(request):
 
     form = PostForm(request.POST or None)
 
-    if form.is_vaild():
+    if form.is_valid():
         form.save()
     else:
         form = PostForm()
@@ -55,3 +55,4 @@ def new_post(request):
     }
 
     return render(request, template, context)
+
