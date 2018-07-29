@@ -11,11 +11,7 @@ class InputTextForm(forms.ModelForm):
     class Meta:
         model = Post
 
-        fields = [
-            'title',
-            'author',
-            'content',
-        ]
+        fields = ['title', 'author', 'content']
 
         widgets = {
             'title': forms.TextInput(
@@ -31,3 +27,9 @@ class InputTextForm(forms.ModelForm):
                 }
             )
         }
+
+class PostForm(forms.ModelForm):
+    class Meta:
+        model = Post
+        fields = ['title', 'author', 'content'] 
+

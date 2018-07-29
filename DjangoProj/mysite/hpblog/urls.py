@@ -1,9 +1,10 @@
 from django.conf.urls import url
-from . import views
+from .views import board_list, board_item, board_insert, new_post
 
 urlpatterns = [
-    url(r'^$', views.board_list, name='board_list'),
-    url(r'^insert/$', views.board_insert, name='board_insert'),
-    url(r'^item/$', views.board_item, name='board_item'),
-    url(r'^item/(?P<p_id>[\d]+)/$', views.board_item, name='board_item'),
+    url(r'^$', board_list, name='board_list'),
+    url(r'^insert/$', board_insert, name='board_insert'),
+    url(r'^item/$', board_item, name='board_item'),
+    url(r'^item/(?P<p_id>[\d]+)/$', board_item, name='board_item'),
+    url(r'^newpost/$', new_post, name='new_post'),
 ]
