@@ -8,8 +8,7 @@
 			<tr>
 				<th>ID</th>
 				<th>AUTHOR</th>
-				<th>TITLE</th>
-				<th>TEXT</th>
+				<th width="50%">TITLE</th>
 				<th>CREATE_DATE</th>
 			</tr>
 			{% for p in post %}
@@ -17,16 +16,15 @@
 				<td>{{p.id}}</td>
 				<td>{{p.author}}</td>
 				<td>
-					<a href="{% url 'board_item' %}"> <!-- param!! -->
+					<a href="{% url 'board_item' %}{{p.id}}"> <!-- param!! -->
 						{{p.title}}
 					</a>
 				</td>
-				<td>{{p.content}}</td>
 				<td>{{p.create_date}}</td>
 			</tr>
 			{% endfor %}
 			<tr>
-				<td collspan="3">
+				<td colspan="4">
 					<a href="{% url 'board_insert' %}">InsertPost</a>
 				</td>
 			</tr>

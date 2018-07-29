@@ -1,7 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, HttpResponse
 
 from .models import Post
-
 from .forms import InputTextForm, TareaForm
 
 # Create your views here.
@@ -18,10 +17,12 @@ def board_list(request):
     return render(request, template, context)
 
 
-def board_item(request):
-    message = f'I will show about "p_title"'
+def board_item(request, p_id):
+    
+    item = Post.objects.get(id=p_id)
+
     context = {
-        'message': message,
+        'item': item,
     }
 
     template = 'hpblog/board_item.html'

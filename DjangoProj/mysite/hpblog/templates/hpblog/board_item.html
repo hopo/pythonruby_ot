@@ -4,7 +4,27 @@
 
 	<div class='container'>
 		<div class='pagetitle'>hpblog board_item</div>
-		{{ message }}
+		<table border='1px' class='table'>
+			<tr>
+				<th>TITLE</th>
+				<td>{{item.title}}</td>
+			</tr>
+			<tr>
+				<th>AUTHOR</th>
+				<td>{{item.author}}</td>
+			</tr>
+			<tr>
+				<th>CONTENT</th>
+				<td>{{item.content}}</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<a href="#List">List</a>
+					<a href="#Edit">Edit</a>
+					<a href="#Dlete">Delete</a>
+				</td>
+			</tr>
+		</table>
 	</div>
 
 {% endblock %}
