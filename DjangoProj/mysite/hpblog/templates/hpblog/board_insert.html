@@ -27,30 +27,19 @@
 		</table>
 		</form>
 	</div>
-
 	<div class='container'>
 		<div class='pagetitle'>hpblog board_insert</div>
 		<form action="" method="post">
 		{% csrf_token %}
 		<table border='1px' class='table'>
-			<tr>
-				<td>Title</td>
-				<td>
-					<input type="text" name="p_text" />
-				</td>
-			</tr>
+			{{ inputTextForm }}	
 			<tr>
 				<td>author</td>
 				<td>
 					<input type="text" name="p_author" />
 				</td>
 			</tr>
-			<tr>
-				<td>text</td>
-				<td>
-					{{ form }}
-				</td>
-			</tr>
+			{{ tareaForm }}
 		</table>
 		</form>
 	</div>

@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
 from .models import Post
-from .forms import InsertForm, MDForm
+from .forms import InputTextForm, TareaForm
 
 # Create your views here.
 
@@ -17,15 +17,15 @@ def board_list(request):
 
 def board_insert(request):
 
-
     template = 'hpblog/board_insert.html'
     
-    form = InsertForm.text
-#     md = MDForm.content
+    inputTextForm = InputTextForm
+    tareaForm = TareaForm
 
     context = {
-        'form' : form,
-#         'md' : md,
+        'inputTextForm' : inputTextForm,
+        'tareaForm' : tareaForm,
     }
 
     return render(request, template, context)
+

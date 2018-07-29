@@ -1,8 +1,11 @@
 from django import forms
-# from markdownx.fields import MarkdownxFormField
 
-# class MDForm(forms.Form):
-#     content = MarkdownxFormField()
-
-class InsertForm(forms.Form):
+class TareaForm(forms.Form):
     text = forms.Textarea
+
+
+class InputTextForm(forms.Form):
+    title = forms.CharField(
+        max_length=40,
+        widget=forms.TextInput(attrs={'placeholder' : 'title is ..'}),
+    )
