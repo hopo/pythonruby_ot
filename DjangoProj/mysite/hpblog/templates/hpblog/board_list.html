@@ -10,6 +10,7 @@
 				<th>AUTHOR</th>
 				<th width="50%">TITLE</th>
 				<th>CREATE_DATE</th>
+				<th>PUBLISHED_DATE</th>
 			</tr>
 			{% for p in post %}
 			<tr>
@@ -21,10 +22,11 @@
 					</a>
 				</td>
 				<td>{{p.create_date}}</td>
+				<td>{{p.published_date}}</td>
 			</tr>
 			{% endfor %}
 			<tr>
-				<td colspan="4">
+				<td colspan="5">
 					<a href="{% url 'board_insert' %}">InsertPost</a>
 				</td>
 			</tr>

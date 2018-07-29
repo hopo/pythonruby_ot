@@ -1,7 +1,7 @@
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render, redirect
 
 from .models import Post
-from .forms import InputTextForm, TareaForm, PostForm
+from .forms import PostForm
 
 # Create your views here.
 
@@ -9,10 +9,8 @@ from .forms import InputTextForm, TareaForm, PostForm
 def board_list(request):
     template = 'hpblog/board_list.html'
 
-    post = Post.objects.all()
-    context = {
-        'post': post,
-    }
+    post = Post.objects.order_by('-id')
+    context = {'post': post}
 
     return render(request, template, context)
 
@@ -22,9 +20,7 @@ def board_item(request, p_id):
 
     item = Post.objects.get(id=p_id)
 
-    context = {
-        'item': item,
-    }
+    context = {'item': item}
 
     return render(request, template, context)
 
@@ -32,27 +28,14 @@ def board_item(request, p_id):
 def board_insert(request):
     template = 'hpblog/board_insert.html'
 
-    inputTextForm = InputTextForm
-    context = {
-        'inputTextForm': inputTextForm,
-    }
-
-    return render(request, template, context)
-
-
-def new_post(request):
-    template = 'hpblog/new_post.html'
-
     form = PostForm(request.POST or None)
 
     if form.is_valid():
         form.save()
+        return redirect('board_list')
     else:
         form = PostForm()
 
-    context = {
-        'form': form,
-    }
+    context = {'form': form}
 
     return render(request, template, context)
-

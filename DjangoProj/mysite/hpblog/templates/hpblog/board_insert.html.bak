@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+	<div class='container'>
+		<div class='pagetitle'>hpblog board_insert</div>
+		<form action="#" method="post">
+			{% csrf_token %}
+
+			<!-- // solA) form in table
+			<table border='1px' class='table'>
+				{{ inputTextForm }}	
+			</table>
+			-->
+
+			<!-- // solB) form surrond p tag using djtemplate method -->
+			{{ inputTextForm.as_p }}	
+			<input type="submit" value="register-post" />
+		</form>
+		<a href="{% url 'board_list' %}">cancel</a>
+	</div>
+
+{% endblock %}

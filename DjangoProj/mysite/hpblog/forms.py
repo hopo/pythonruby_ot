@@ -7,17 +7,14 @@ class TareaForm(forms.Form):
     text = forms.Textarea
 
 
-class InputTextForm(forms.ModelForm):
+class PostForm(forms.ModelForm):
     class Meta:
         model = Post
-
         fields = ['title', 'author', 'content']
 
         widgets = {
             'title': forms.TextInput(
-                attrs={
-                'placeholder': 'Title Is ..'
-                }
+                attrs={'placeholder': 'Title Is ..'}
             ),
             'content': forms.Textarea(
                 attrs={
@@ -28,8 +25,12 @@ class InputTextForm(forms.ModelForm):
             )
         }
 
-class PostForm(forms.ModelForm):
+
+'''
+class InputTextForm(forms.ModelForm):
     class Meta:
         model = Post
-        fields = ['title', 'author', 'content'] 
 
+        fields = ['title', 'author', 'content']
+
+'''
