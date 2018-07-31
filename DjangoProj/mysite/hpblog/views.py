@@ -39,3 +39,12 @@ def board_insert(request):
     context = {'form': form}
 
     return render(request, template, context)
+
+def board_update(request):
+    template = 'hpblog/board_update.html'
+
+#     item = Post.objects.get(id=p_id)
+
+#     context = {'item': item}
+
+    return render(request, template, None)
