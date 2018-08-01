@@ -45,15 +45,10 @@ def board_update(request, p_id):
 
     item = Post.objects.get(id=p_id)
 
-    if request.method == 'POST':
-        item.title = p_title
-        item.content = p_content
-        item.save()
-        return redirect('board_list')
-    else:
-        context = {'item': item}
+    context = {'item': item}
 
     return render(request, template, context)
+
 
 def board_delete(request, p_id):
     template = 'hpblog/board_delete.html'

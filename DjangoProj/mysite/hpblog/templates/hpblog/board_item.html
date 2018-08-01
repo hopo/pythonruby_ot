@@ -22,7 +22,7 @@
 			<tr>
 				<td colspan="2">
 					<a href="{% url 'board_list' %}">List</a>
-					<a href="#">#Update</a>
+					<a href="{% url 'board_update' %}{{item.id}}">Update</a>
 					<a href="{% url 'board_delete' %}{{item.id}}">Delete</a>
 				</td>
 			</tr>
