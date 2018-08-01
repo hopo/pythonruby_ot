@@ -3,8 +3,6 @@ from django import forms
 from .models import Post
 
 
-class TareaForm(forms.Form):
-    text = forms.Textarea
 
 
 class PostForm(forms.ModelForm):
@@ -33,4 +31,6 @@ class InputTextForm(forms.ModelForm):
 
         fields = ['title', 'author', 'content']
 
+class TareaForm(forms.Form):
+    text = forms.Textarea
 '''

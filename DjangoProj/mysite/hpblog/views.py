@@ -40,11 +40,17 @@ def board_insert(request):
 
     return render(request, template, context)
 
-def board_update(request):
+def board_update(request, p_id):
     template = 'hpblog/board_update.html'
 
-#     item = Post.objects.get(id=p_id)
+    item = Post.objects.get(id=p_id)
 
-#     context = {'item': item}
+    if form.is_valid():
+        item.title = p_title
+        item.content = p_content
+        item.save()
+        return redirect('board_list')
 
-    return render(request, template, None)
+    context = {'item': item}
+
+    return render(request, template, context)

@@ -2,8 +2,30 @@
 
 {% block content %}
 <h1>UPDATE PAGE</h1>
-<form method="post">{% csrf_token %}
-	{{form.as_p}}
+<form method="post" action="{% url 'board_update' %}{{item.id}}/proc">{% csrf_token %}
+	<table class="table">
+		<input type="hidden" name="p_id" value="{{item.id}}" />
+		<tr>
+			<th>TITLE</th>
+			<td>
+				<input name="p_title" value="{{item.title}}" />
+			</td>
+		</tr>
+		<tr>
+			<th>AUTHOR</th>
+			<td>
+				<div>{{item.author}}</div>
+			</td>
+		</tr>
+		<tr>
+			<th>Content:</th>
+			<td>
+				<textarea name="p_content" cols="40" rows="10">
+					{{item.content}}
+				</textarea>
+			</td>
+		</tr>
+	</table>
 	<button type="submit">Update</button>
 </form>
 {% endblock %}
