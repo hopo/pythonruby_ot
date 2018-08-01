@@ -54,3 +54,13 @@ def board_update(request, p_id):
         context = {'item': item}
 
     return render(request, template, context)
+
+def board_delete(request, p_id):
+    template = 'hpblog/board_delete.html'
+
+    item = Post.objects.get(id=p_id)
+    item.delete()
+
+    context = {'item': p_id}
+
+    return render(request, template, context)
