@@ -45,12 +45,12 @@ def board_update(request, p_id):
 
     item = Post.objects.get(id=p_id)
 
-    if form.is_valid():
+    if request.method == 'POST':
         item.title = p_title
         item.content = p_content
         item.save()
         return redirect('board_list')
-
-    context = {'item': item}
+    else:
+        context = {'item': item}
 
     return render(request, template, context)
