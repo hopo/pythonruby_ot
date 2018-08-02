@@ -1,4 +1,6 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
+from django.utils import timezone
+# from django.http import Http404
 
 from .models import Post
 from .forms import PostForm, UpdateForm
@@ -44,19 +46,26 @@ def board_insert(request):
 def board_update(request, p_id):
     template = 'hpblog/board_update.html'
 
-    form = UpdateForm(request.POST or None)
-    item = Post.objects.get(id=p_id)
+#     item = Post.objects.get(id=p_id)
+    item = get_object_or_404(Post, id=p_id)
 
-    if form.is_valid():
-        item.title = form.title
-        item.content = form.content
-        return redirect('board_list')
+    if request.method == "POST":
+        form = UpdateForm(request.POST, instance=item)
+
+        if form.is_valid():
+            item = form.save(commit=False)
+#             item.title = request.title
+            print('>>> req: {}'.format(request.user))
+            item.published_date = timezone.now()
+            item.save()
+
+            return redirect('board_list')
     else:
-        form = UpdateForm()
+        form = UpdateForm(instance=item)
 
     context = {
-        'item': item,
         'form': form,
+        'item' : item,
     }
 
     return render(request, template, context)
@@ -65,7 +74,8 @@ def board_update(request, p_id):
 def board_delete(request, p_id):
     template = 'hpblog/board_delete.html'
 
-    item = Post.objects.get(id=p_id)
+#     item = Post.objects.get(id=p_id)
+    item = get_object_or_404(Post, id=p_id)
     item.delete()
 
     context = {'item': p_id}

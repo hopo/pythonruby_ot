@@ -22,8 +22,8 @@
 			<tr>
 				<td colspan="2">
 					<a href="{% url 'board_list' %}">List</a>
-					<a href="{% url 'board_update' %}{{item.id}}">Update</a>
-					<a href="{% url 'board_delete' %}{{item.id}}">Delete</a>
+					<a href="{% url 'board_update' p_id=item.id %}">Update</a>
+					<a href="{% url 'board_delete' p_id=item.id %}">Delete</a>
 				</td>
 			</tr>
 		</table>

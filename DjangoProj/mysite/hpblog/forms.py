@@ -24,3 +24,19 @@ class UpdateForm(forms.ModelForm):
     class Meta:
         model = Post
         fields = ['title', 'content']
+
+        widgets = {
+            'title': forms.TextInput(),
+            '''
+            'author' : forms.TextInput(
+                attrs={ 'disabled' : 'true' }
+            ),
+            '''
+            'content': forms.Textarea(
+                attrs={
+                    'cols': '80',
+                    'rows': '10',
+                }
+            )
+        }
+
