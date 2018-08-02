@@ -20,14 +20,7 @@ class PostForm(forms.ModelForm):
             )
         }
 
-
-'''
-class InputTextForm(forms.ModelForm):
+class UpdateForm(forms.ModelForm):
     class Meta:
         model = Post
-
-        fields = ['title', 'author', 'content']
-
-class TareaForm(forms.Form):
-    text = forms.Textarea
-'''
+        fields = ['title', 'content']

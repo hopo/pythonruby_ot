@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 
 from .models import Post
-from .forms import PostForm
+from .forms import PostForm, UpdateForm
 
 # Create your views here.
 
@@ -40,12 +40,24 @@ def board_insert(request):
 
     return render(request, template, context)
 
+
 def board_update(request, p_id):
     template = 'hpblog/board_update.html'
 
+    form = UpdateForm(request.POST or None)
     item = Post.objects.get(id=p_id)
 
-    context = {'item': item}
+    if form.is_valid():
+        item.title = form.title
+        item.content = form.content
+        return redirect('board_list')
+    else:
+        form = UpdateForm()
+
+    context = {
+        'item': item,
+        'form': form,
+    }
 
     return render(request, template, context)
 
