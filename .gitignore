@@ -8,18 +8,21 @@
 
 .gdb_history
 
+# *** ccpp
 cTest.out
 cTest.outr
 
+# *** js
 node_modules/
 
+# *** java
 *.class
 .metadata/
 .recommenders/
 
+# *** python
 .idea/
 venv/
-
 *.pyc
 __pycache__
 #db.sqlite3
