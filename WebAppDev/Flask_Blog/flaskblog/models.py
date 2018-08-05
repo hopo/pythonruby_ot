@@ -6,7 +6,7 @@ from flask_login import UserMixin
 '''
 $ python
 >> from flaskblog import db
-~ ~ ~
+ ~ ~ ~
  'SQLALCHEMY_ ~ ~ ~
 >> from flaskblog.models import User, Post
 >> db.create_all()

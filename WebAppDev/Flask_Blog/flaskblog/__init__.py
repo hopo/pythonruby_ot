@@ -4,23 +4,25 @@ from flask_bcrypt import Bcrypt
 from flask_login import LoginManager
 
 
+# *** INIT
 # ? app and app fields, function
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'a211bb13913f781c97f25f0bd0c2dbc6'
 
-
-# *** db1) sqlite using SQLAlchemy
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
-db = SQLAlchemy(app)
-
-# *** db2) MariaDB using SQLAlchemy
-#app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://hpark:park@localhost/flask_db'
+# *** Database
+# db1) sqlite using SQLAlchemy
+#app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
 #db = SQLAlchemy(app)
 
-# *** db3) MongoDB using PyMongo
-#from flask_pymongo import PyMongo
-#app.config["MONGO_URI"] = 'mongodb://localhost:27017/fla_db'
-#mongo = PyMongo(app)
+# db2) MariaDB using SQLAlchemy
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://hpark:park@localhost:3306/flask_db'
+db = SQLAlchemy(app)
+
+# db3) MongoDB using flask-mongoalchemy
+#from flask_mongoalchemy import MongoAlchemy
+#app.config['MONGOALCHEMY_DATABASE'] = 'fla_db'
+#app.config['MONGOALCHEMY_CONNECTION_STRING'] = 'mongodb://localhost:27017/fla_db'
+#db = MongoAlchemy(app)
 
 
 # *** Bcrypt
@@ -35,18 +37,3 @@ login_manager.login_message_category = 'info'
 from flaskblog import routes
 
 
-# ########
-'''
-from flask import Flask
-from flask_mongoalchemy import MongoAlchemy
-
-app = Flask(__name__)
-app.config['MONGOALCHEMY_DATABASE'] = 'fla_db'
-# app.config['MONGOALCHEMY_CONNECTION_STRING'] = 'mongodb://hpark:park@localhost:27017/fla_db'
-
-db = MongoAlchemy(app)
-
-
-class Author(db.Document):
-    name = db.StringField()
-'''
