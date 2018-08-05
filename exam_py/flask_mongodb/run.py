@@ -1,11 +1,12 @@
-from flask import Flask, render_template
+from flask import Flask
+from flask_mongoalchemy import MongoAlchemy
 
 app = Flask(__name__)
-app.config["MONGO_URI"] = 'mongodb://localhost:27017/fla_db'
-mongo = PyMongo(app)
+app.config['MONGOALCHEMY_DATABASE'] = 'fla_db'
+app.config['MONGOALCHEMY_CONNECTION_STRING'] = 'mongodb://hpark:park@118.219.216.145:12717/fla_db'
 
-@app.route("/")
-def home_page():
+db = MongoAlchemy(app)
 
-    return render_template("index.html", item=item)
+class Author(db.Document):
+    name = db.StringField()
 
