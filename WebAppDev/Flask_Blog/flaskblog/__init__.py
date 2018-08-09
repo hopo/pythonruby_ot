@@ -15,7 +15,7 @@ app.config['SECRET_KEY'] = 'a211bb13913f781c97f25f0bd0c2dbc6'
 #db = SQLAlchemy(app)
 
 # db2) MariaDB using SQLAlchemy
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://hpark:park@localhost:3306/flask_db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://java:oracle@localhost:3306/flask_db'
 db = SQLAlchemy(app)
 
 # db3) MongoDB using flask-mongoalchemy
