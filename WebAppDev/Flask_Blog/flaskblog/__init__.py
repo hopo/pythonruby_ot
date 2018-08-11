@@ -7,6 +7,7 @@ from flask_login import LoginManager
 # *** INIT
 # ? app and app fields, function
 app = Flask(__name__)
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SECRET_KEY'] = 'a211bb13913f781c97f25f0bd0c2dbc6'
 
 # *** Database
