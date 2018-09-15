@@ -6,27 +6,19 @@ def solution(bridge_length, weight, truck_weights):
     print("weight        : ", weight)
     print("truck_weights : ", truck_weights)
 
-    time = 0
     wait = 0
-    t = 0
-    onBridge = list()
+    onthebridge = list()
 
-    while t != len(truck_weights):
-        time += 1
+    for truck in truck_weights:
+        onthebridge.append(truck)
+        
+        if len(onthebridge) > bridge_length:
+            onthebridge.pop(0)
 
-        if time % bridge_length == 0:
-            onBridge.pop(0)
-
-        if sum(onBridge) > weight:
+        if sum(onthebridge) > weight:
             wait += 1
-        else:
-            onBridge.append(truck_weights[t])
-            t += 1
 
-        print(onBridge)
-        print("wait: ", wait)
-
-    return time + wait
+    return len(truck_weights) + bridge_length + wait
 
 
 bridge_length = [2, 100, 100]
@@ -39,7 +31,7 @@ result        = [8, 101, 110]
 
 # checker
 
-for i in [0]:
+for i in [0, 1, 2]:
     test = solution(bridge_length[i], weight[i], truck_weights[i])
     print(f'test{i}: {result[i]} == {test} ?', result[i] == test)
     print()
