@@ -1,5 +1,5 @@
 dataclasses==0.6
-Django==2.1
+Django==2.1.1
 djongo==1.2.29
 jedi==0.12.1
 parso==0.3.0
