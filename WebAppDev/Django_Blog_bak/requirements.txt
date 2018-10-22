@@ -1,0 +1,8 @@
+dataclasses==0.6
+Django==2.1.2
+djongo==1.2.29
+jedi==0.12.1
+parso==0.3.0
+pymongo==3.7.1
+pytz==2018.5
+sqlparse==0.2.4

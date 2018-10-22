@@ -1,0 +1,45 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+
+<!-- base.html -->
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Django Project 'mysite'</title>
+	<link rel="stylesheet" href="{% static 'style/common.css' %}">
+</head>
+<body>
+	<header>
+		<div id='maintitle' style='font-size:2em;'>A Beacon School</div>
+		<table class='table' border='1px'>
+			<tr>
+				<th>main/</th>
+				<th>hpblog/</th>
+				<th>(f28apa)</th>
+				<th>(link)</th>
+			</tr>
+			<tr>
+				<td>
+					<a href='/'>index.html</a>
+				</td>
+				<td>
+					<a href='{% url 'board_list' %}'>board_list.html</a>
+				</td>
+				<td>
+					<a href='http://118.219.216.145:10080/f28apa' target='_blank'>f28apa</a>
+				</td>
+				<td>
+					<a href='https://docs.djangoproject.com/ko/1.11/' target='_blank'>docs_django1.11</a>
+				</td>
+			</tr>
+		</table>
+	</header>
+	<hr>
+
+	{% block content %}
+	{% endblock %}
+
+	<hr>
+</body>
+</html>
