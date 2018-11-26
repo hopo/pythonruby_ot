@@ -1,10 +1,9 @@
 #!/usr/bin/python
 
-import cgitb
-cgitb.enable()
+print("Content-Type: text/html\n")
+print("Hello Python!!!")
 
-print("Content-Type: text/html")
-print()
-print("hello python!!!")
+import cgi
+cgi.test()
 
 # more comprehension
