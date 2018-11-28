@@ -6,7 +6,12 @@ ping -c3 google.com
 fdisk -l
 cfdisk /dev/sda
 {partioning}
+
++ 파티션 시 /boot의 파티션에는 bootable
+
 fdisk -l
+
++ 파티션 확인
 
 mkfs.ext4 /dev/sda1	(;root)
 mkfs.ext4 /dev/sda3	(;home)
