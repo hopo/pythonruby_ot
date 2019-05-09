@@ -1,11 +1,8 @@
 # ing...
 
 def time_converter(time):
-    apm = 'a.m.'
     hour = int(time[:2])
-    if hour > 12:
-        hour = hour-12
-        apm = 'p.m.'
+    apm = 'p.m.'
 
     return '{}{} {}'.format(hour, time[2:], apm)
 
@@ -17,4 +14,5 @@ if __name__ == '__main__':
     assert time_converter('12:30') == '12:30 p.m.'
     assert time_converter('09:00') == '9:00 a.m.'
     assert time_converter('23:15') == '11:15 p.m.'
+    assert time_converter('00:00') == '12:00 a.m.'
     print("Coding complete? Click 'Check' to earn cool rewards!")
