@@ -1,8 +1,11 @@
-# ing...
-
 def time_converter(time):
     hour = int(time[:2])
-    apm = 'p.m.'
+    apm = 'a.m.'
+    if hour > 11:
+        apm = 'p.m.'
+        hour -= 12
+    if hour == 0:
+        hour = 12
 
     return '{}{} {}'.format(hour, time[2:], apm)
 
