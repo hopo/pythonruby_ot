@@ -95,8 +95,8 @@ reboot
  [ *** ]
 
 pacman -Syu
-pacman -S xorg xorg-xinit xorg-apps
-(pacman -S xterm xorg-twm xorg-xclock)
+pacman -S xorg xorg-xinit xorg-apps xterm
+(pacman -S xorg-twm xorg-xclock)
 pacman xf86-video-***
 
 pcaman -S lightdm lightdm-gtk-greeter
