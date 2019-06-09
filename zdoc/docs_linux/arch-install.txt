@@ -20,9 +20,11 @@ mkswap /dev/sda2	(;swap)
 swapon /dev/sda2
 
 mount /dev/sda(R) /mnt
+
 mkdir /mnt/boot
 mkdir /mnt/home
 mkdir /mnt/var
+
 mount /dev/sda(H) /mnt/home
 
 
@@ -48,6 +50,7 @@ arch-chroot /mnt /bin/bash
 nano /etc/locale.gen
 {un# en_US.UTF-8}
 locale-gen
+
 echo LANG=en_US.UTF-8 > /etc/locale.conf
 export LANG=en_US.UTF-8
 
