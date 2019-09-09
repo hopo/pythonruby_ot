@@ -64,9 +64,9 @@ hwclock --systohc --utc
 echo arch2017 >> /etc/hostname
 systemctl enable dhcpcd.service
 pacman -Syu
-pacman -S intel-ucode
+(pacman -S intel-ucode)
 pacman -S wpa_supplicant dialog
-pacman -S networkmanager networtk-manager-applet
+pacman -S networkmanager network-manager-applet
 
 
  [ *** ]
