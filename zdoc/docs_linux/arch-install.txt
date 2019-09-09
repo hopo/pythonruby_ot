@@ -107,9 +107,10 @@ pacman -S i3
 reboot
 
 pacman -S vim git openssh ranger w3m firefox
-pacman -S ttf-freefont noto-fonts-cjk
+pacman -S noto-fonts-cjk
 
 (; i3)
++ if 리부트 후 자동 i3 실행이 아니된다면
 nano /home/park/.xinitrc
 {exec i3}
 
