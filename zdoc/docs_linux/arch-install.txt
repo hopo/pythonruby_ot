@@ -7,7 +7,8 @@ fdisk -l
 cfdisk /dev/sda
 {partioning}
 
-+ 파티션 시 /boot의 파티션에는 bootable
++ vbox label type은 dos
++ 파티션 시 /boot를 사용한다면 bootable
 
 fdisk -l
 
