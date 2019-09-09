@@ -83,7 +83,7 @@ nano /etc/sudoers
 
 grub-install /dev/sda
 nano /etc/default/grub
-{TIME=5}
+{TIMEOUT=2}
 grub-mkconfig -o /boot/grub/grub.cfg
 mkinitcpio -p linux
 
